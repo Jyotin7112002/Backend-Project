@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <title>Bus Selection</title>
+  </head>
+  <body style="background-image:url('https://www.sustainable-bus.com/wp-content/uploads/2020/12/BYD-ADL-Enviro400EV-for-Stagecoach-Manchester-resized.jpg'); background-size: cover;">
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <div class="container-fluid">
+        <a class="navbar-brand text-white" href="#">GreenBus Selection</a>
+        <div class="collapse navbar-collapse">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link text-white" href="#">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-white" href="#">About Us</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-white" th:href="@{/serv}">Services</a>
+            </li>
+          </ul>
+        </div>
+        <div class="d-flex">
+          <button class="btn btn-warning">Logout</button>
+        </div>
+      </div>
+    </nav>
+
+    <div class="container mt-5">
+      <form th:action="@{/insert}" method="post" class="text-white">
+        
+  <div style="color: white" "mb-3">
+    <label class="form-label">Passengers email</label>
+    <input type="email" name="pemail">
+  </div>
+  <div style="color: white" class="mb-3">
+    <label class="form-label">Passengers name</label>
+    <input type="text" name="pname">
+  </div>
+  <div style="color: white" class="mb-3">
+    <label class="form-label">Passengers age</label>
+    <input type="text" name="page">
+  </div>
+  <div style="color: white" class="mb-3">
+    <label class="form-label">Passengers gender</label>
+    <div style="color: white">
+    <input type="radio" name="pgen" value="male"><label>Male</label>
+     <input type="radio" name="pgen" value="female"><label>Female</label>
+      <input type="radio" name="pgen" value="other"><label>Other</label>
+    </div>
+  </div>
+  <div style="color: white" class="mb-3">
+    <label class="form-label">Passengers point</label>
+    <input type="text" name="ppoint">
+  </div>
+  <div style="color: white" class="mb-3">
+    <label class="form-label">Passengers Destination</label>
+    <input type="text" name="pdes">
+  </div>
+ 
+  <div style="color: white" class="mb-3">
+    <label class="form-label">Passengers date</label>
+    <input type="date" name="pdate">
+  </div>
+  <div style="color: white" class="mb-3">
+    <label class="form-label">Passengers pay</label>
+    <input type="number" name="ppay">
+  </div>
+ <div style="color: white" class="mb-3">
+    <label class="form-label">Passengers contact</label>
+    <input type="number" name="pcontact">
+  </div>
+ 
+  
+        <button class="btn btn-success" type="submit">Add Bus</button>
+      </form>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>
